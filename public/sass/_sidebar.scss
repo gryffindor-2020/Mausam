@@ -1,0 +1,27 @@
+.sidebar{
+    flex: 0 0 20%;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .logo{
+        display: flex;
+        align-items: center;
+        &__img{
+            height: 7.5rem;
+        }
+        &__text{
+            margin-left: 1rem;
+            font-size: 1.4rem;
+        }
+    }
+    .logout{
+        display: flex;
+        align-items: center;
+        color: #dfddc7;
+        &__icon{
+            margin-left: 1rem;
+            font-size: 1.5rem;
+        }
+    }
+}

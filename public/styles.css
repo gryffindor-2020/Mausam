@@ -1,0 +1,30 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+
+body {
+  font-family: "Cabin", sans-serif;
+  color: #0278ae;
+  font-weight: 300;
+  background-color: #e1f4f3; }
+
+.App {
+  max-width: 120rem;
+  margin: 8rem auto;
+  min-height: 50rem;
+  background-color: #f9fcfb;
+  border-radius: 35px;
+  padding: 5rem;
+  display: grid;
+  grid-template-columns: 20rem 1fr 25rem; }
+
+.leftpanel {
+  display: flex;
+  justify-content: space-around; }

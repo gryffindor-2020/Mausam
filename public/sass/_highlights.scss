@@ -1,0 +1,53 @@
+.highlights{
+    border: 2rem solid $color-white;
+    border-radius: 50px;
+    background-color: $color-secondary;
+    flex: 1;
+    padding: 3rem 3rem 1rem;
+    &__info{
+        margin-top: 2rem;
+        display: grid;
+        grid-gap: 5rem;
+        grid-template-columns: repeat(auto-fit,minmax(18.2rem,max-content));
+        grid-template-rows: repeat(auto-fit,minmax(15rem,max-content));
+        & > *{
+            border-radius: 30px;
+            padding: 2rem;
+            background-color: $color-white;
+        }
+    }
+    &__tile{
+        &--heading{
+            color: #dfddc7;
+            font-size: 1.7rem;
+        }
+        &--data{
+            line-height: 1;
+            display: flex;
+            align-items: flex-end;
+            color: $font-color;
+            font-size: 3rem;
+            margin-top: 1.3rem;
+            margin-bottom: 1.3rem;
+        }
+        &--unit{
+            font-size: 2rem;
+            margin-bottom: .8rem;
+            margin-left: .4rem;
+        }
+        &--comment{
+            font-weight: 100;
+            font-size: 1.3rem;
+        }
+    }
+}
+.circle{
+    height: 3rem;
+    width: 3rem;
+    text-align: center;
+    border-radius: 50%;
+    background-image: linear-gradient(to right bottom,rgba($color-yellow,.6) , rgba($color-yellow,1) );
+    font-size: 2rem;
+    color: white;
+    margin-right: 2rem;
+}

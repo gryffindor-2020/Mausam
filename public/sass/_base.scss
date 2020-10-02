@@ -1,0 +1,45 @@
+// COLOR VARIABLES
+$color-primary: #b2ebf2;
+
+$color-secondary: #d9ecf2;
+
+$color-white : #f9fcfb;
+
+$color-yellow : #ffbd50;
+
+$font-color : #333866;
+// FONT VARIABLES
+$font-primary: 'Poppins', sans-serif;
+
+
+*,
+*::before, 
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+html{ 
+    box-sizing: border-box;
+    font-size: 62.5%; //1 rem = 10px
+
+    // @media only screen and (max-width:$bp-largest){
+    //     font-size: 50%; //1rem = 8px
+    // }
+}
+body{
+    font-family: $font-primary;
+    color: $font-color;
+    font-weight:300;
+    background-color: $color-primary;
+}
+.container{
+    max-width: 100rem;
+    margin: 8rem auto;
+    box-shadow: 0 2rem 6rem rgba($color: black, $alpha: .2);
+    background-color: $color-white;
+    border-radius: 50px;
+    overflow: hidden;
+    display: flex;
+    min-height: 57rem;
+}

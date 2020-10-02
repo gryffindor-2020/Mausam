@@ -1,0 +1,96 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: #333866;
+  font-weight: 300;
+  background-color: #b2ebf2; }
+
+.container {
+  max-width: 100rem;
+  margin: 8rem auto;
+  box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.2);
+  background-color: #f9fcfb;
+  border-radius: 50px;
+  overflow: hidden;
+  display: flex;
+  min-height: 57rem; }
+
+.sidebar {
+  flex: 0 0 20%;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
+  .sidebar .logo {
+    display: flex;
+    align-items: center; }
+    .sidebar .logo__img {
+      height: 7.5rem; }
+    .sidebar .logo__text {
+      margin-left: 1rem;
+      font-size: 1.4rem; }
+  .sidebar .logout {
+    display: flex;
+    align-items: center;
+    color: #dfddc7; }
+    .sidebar .logout__icon {
+      margin-left: 1rem;
+      font-size: 1.5rem; }
+
+.highlights {
+  border: 2rem solid #f9fcfb;
+  border-radius: 50px;
+  background-color: #d9ecf2;
+  flex: 1;
+  padding: 3rem 3rem 1rem; }
+  .highlights__info {
+    margin-top: 2rem;
+    display: grid;
+    grid-gap: 5rem;
+    grid-template-columns: repeat(auto-fit, minmax(18.2rem, max-content));
+    grid-template-rows: repeat(auto-fit, minmax(15rem, max-content)); }
+    .highlights__info > * {
+      border-radius: 30px;
+      padding: 2rem;
+      background-color: #f9fcfb; }
+  .highlights__tile--heading {
+    color: #dfddc7;
+    font-size: 1.7rem; }
+  .highlights__tile--data {
+    line-height: 1;
+    display: flex;
+    align-items: flex-end;
+    color: #333866;
+    font-size: 3rem;
+    margin-top: 1.3rem;
+    margin-bottom: 1.3rem; }
+  .highlights__tile--unit {
+    font-size: 2rem;
+    margin-bottom: .8rem;
+    margin-left: .4rem; }
+  .highlights__tile--comment {
+    font-weight: 100;
+    font-size: 1.3rem; }
+
+.circle {
+  height: 3rem;
+  width: 3rem;
+  text-align: center;
+  border-radius: 50%;
+  background-image: linear-gradient(to right bottom, rgba(255, 189, 80, 0.6), #ffbd50);
+  font-size: 2rem;
+  color: white;
+  margin-right: 2rem; }
+
+.user-profile {
+  flex: 0 0 25%; }
