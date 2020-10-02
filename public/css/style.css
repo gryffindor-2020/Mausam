@@ -26,7 +26,7 @@ body {
   min-height: 57rem; }
 
 .sidebar {
-  flex: 0 0 20%;
+  flex: 0 0 10%;
   padding: 3rem;
   display: flex;
   flex-direction: column;
@@ -38,7 +38,7 @@ body {
       height: 7.5rem; }
     .sidebar .logo__text {
       margin-left: 1rem;
-      font-size: 1.4rem; }
+      font-size: 2rem; }
   .sidebar .logout {
     display: flex;
     align-items: center;
@@ -57,7 +57,7 @@ body {
     margin-top: 2rem;
     display: grid;
     grid-gap: 5rem;
-    grid-template-columns: repeat(auto-fit, minmax(18.2rem, max-content));
+    grid-template-columns: repeat(auto-fit, minmax(18.2rem, min-content));
     grid-template-rows: repeat(auto-fit, minmax(15rem, max-content)); }
     .highlights__info > * {
       border-radius: 30px;
@@ -71,7 +71,7 @@ body {
     display: flex;
     align-items: flex-end;
     color: #333866;
-    font-size: 3rem;
+    font-size: 2rem;
     margin-top: 1.3rem;
     margin-bottom: 1.3rem; }
   .highlights__tile--unit {
@@ -93,4 +93,37 @@ body {
   margin-right: 2rem; }
 
 .user-profile {
-  flex: 0 0 25%; }
+  flex: 0 0 25%;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(5rem, max-content));
+  grid-template-rows: 10rem 5rem min-content min-content;
+  padding: 3rem; }
+  .user-profile .location {
+    grid-column: 1 / 3;
+    align-self: end; }
+  .user-profile .date {
+    grid-column: 1  / 3;
+    grid-row: 2 / 3;
+    color: #dfddc7; }
+  .user-profile .today {
+    grid-column: 1 / -1;
+    justify-self: center;
+    margin-bottom: 1rem; }
+  .user-profile .temperature {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: center; }
+    .user-profile .temperature__img {
+      width: 50%; }
+    .user-profile .temperature__value {
+      font-size: 4.5rem; }
+    .user-profile .temperature__unit {
+      align-self: flex-start;
+      margin-top: 0.4rem;
+      font-size: 1.2rem; }
+  .user-profile .forecast-hour {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 1rem; }
