@@ -1,44 +1,44 @@
-.user-profile{
-    flex: 0 0 25%;
-    display: grid;
-    grid-template-columns: repeat(3 , minmax(5rem,max-content));
-    grid-template-rows: 10rem 5rem min-content min-content;
-    padding: 3rem;
-    .location{
-        grid-column: 1 / 3;
-        align-self: end;
+.user-profile {
+  flex: 0 0 25%;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(5rem, max-content));
+  grid-template-rows: 10rem 5rem min-content min-content;
+  padding: 2rem;
+  .location {
+    grid-column: 1 / 3;
+    align-self: end;
+  }
+  .date {
+    grid-column: 1 / 3;
+    grid-row: 2 / 3;
+    color: $font-color-light;
+  }
+  .today {
+    grid-column: 1 / -1;
+    justify-self: center;
+    margin-bottom: 1rem;
+  }
+  .temperature {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: center;
+    &__img {
+      width: 50%;
     }
-    .date{
-        grid-column: 1  / 3;
-        grid-row: 2 / 3;
-        color:$font-color-light;
+    &__value {
+      font-size: 4.5rem;
     }
-    .today{
-        grid-column: 1 / -1;
-        justify-self: center;
-        margin-bottom: 1rem;
+    &__unit {
+      align-self: flex-start;
+      margin-top: 0.4rem;
+      font-size: 1.2rem;
     }
-    .temperature{
-        grid-column: 1 / -1;
-        display: flex;
-        align-items: center;
-        &__img{
-            width: 50%;
-        }
-        &__value{
-            font-size: 4.5rem;
-        }
-        &__unit{
-            align-self: flex-start;
-            margin-top: 0.4rem;
-            font-size: 1.2rem;
-        }
-    }
-    .forecast-hour{
-        grid-column: 1 / -1;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        font-size: 1rem;
-    }
+  }
+  .forecast-hour {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 1rem;
+  }
 }

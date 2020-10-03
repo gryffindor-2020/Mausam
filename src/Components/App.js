@@ -1,14 +1,23 @@
 import React from 'react';
+import {
+  BrowserRouter as Router,
+  Route
+} from "react-router-dom";
+
 import Nav from "./Nav";
-import Highlights from "./Highlights";
-import Profile from "./UserProf"; 
+import Dashboard from "./Dashboard";
+import AddLocation from "./AddLocation";
 function App() {
   return (
-    <div className="container">
+    <Router>
+      <div className="container">
       <Nav/>
-      <Highlights/>
-      <Profile/>
+      <Route exact path="/" component={Dashboard}/>
+      <Route exact path="/dashboard" component={Dashboard}/>
+      <Route exact path="/add-location" component={AddLocation}/>
     </div>
+    </Router>
+    
   );
 }
 

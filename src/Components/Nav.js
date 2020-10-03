@@ -1,18 +1,29 @@
 import React from "react";
-function Nav(){
-    return (
-    
+import { NavLink, Link } from "react-router-dom";
+function Nav() {
+  return (
     <nav className="sidebar">
+      <Link to="/">
         <div className="logo">
-            <img className="logo__img" src={require("../logo.png")} alt="Logo"/>
-            <h2 className="logo__text">Mausam</h2>
+          <img className="logo__img" src={require("../logo.png")} alt="Logo" />
+          <h2 className="logo__text">Mausam</h2>
         </div>
-        
-        <div className="logout">
-            <h2 className="logout__text">Logout</h2>
-            <i className="fas fa-sign-out-alt logout__icon"></i>
-        </div>
+      </Link>
+      <div className="menu">
+        <NavLink to="dashboard">
+          <div className="menu__item">
+            <i className="fas fa-home menu__item--icon"></i>
+            <h2 className="menu__item--text">Dashboard</h2>
+          </div>
+        </NavLink>
+        <NavLink to="add-location">
+          <div className="menu__item">
+            <i className="fas fa-search-location menu__item--icon" />
+            <h2 className="menu__item--text">Add City</h2>
+          </div>
+        </NavLink>
+      </div>
     </nav>
-    );
+  );
 }
 export default Nav;

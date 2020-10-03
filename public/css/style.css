@@ -15,6 +15,10 @@ body {
   font-weight: 300;
   background-color: #b2ebf2; }
 
+a:link,
+a:visited {
+  text-decoration: none; }
+
 .container {
   max-width: 100rem;
   margin: 8rem auto;
@@ -25,12 +29,14 @@ body {
   display: flex;
   min-height: 57rem; }
 
+.active > * {
+  background-color: #d9ecf2; }
+
 .sidebar {
   flex: 0 0 10%;
   padding: 3rem;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between; }
+  flex-direction: column; }
   .sidebar .logo {
     display: flex;
     align-items: center; }
@@ -39,13 +45,19 @@ body {
     .sidebar .logo__text {
       margin-left: 1rem;
       font-size: 2rem; }
-  .sidebar .logout {
-    display: flex;
-    align-items: center;
-    color: #dfddc7; }
-    .sidebar .logout__icon {
-      margin-left: 1rem;
-      font-size: 1.5rem; }
+  .sidebar .menu {
+    margin-top: 10rem; }
+    .sidebar .menu__item {
+      display: flex;
+      align-items: center;
+      font-size: 1.2rem;
+      padding: 1rem;
+      border-radius: 20px; }
+      .sidebar .menu__item--icon {
+        margin-right: 1rem;
+        padding: 0.4rem;
+        border-radius: 5px;
+        background-color: #f9fcfb; }
 
 .highlights {
   border: 2rem solid #f9fcfb;
@@ -97,12 +109,12 @@ body {
   display: grid;
   grid-template-columns: repeat(3, minmax(5rem, max-content));
   grid-template-rows: 10rem 5rem min-content min-content;
-  padding: 3rem; }
+  padding: 2rem; }
   .user-profile .location {
     grid-column: 1 / 3;
     align-self: end; }
   .user-profile .date {
-    grid-column: 1  / 3;
+    grid-column: 1 / 3;
     grid-row: 2 / 3;
     color: #dfddc7; }
   .user-profile .today {
@@ -127,3 +139,30 @@ body {
     flex-direction: column;
     justify-content: center;
     font-size: 1rem; }
+
+.add-location {
+  flex-grow: 1;
+  background-color: #d9ecf2;
+  border: 3rem solid #f9fcfb;
+  border-radius: 50px;
+  padding: 4rem;
+  display: grid;
+  grid-template-rows: 10rem repeat(3, 8rem);
+  align-items: center;
+  justify-items: center; }
+  .add-location__search {
+    width: 80%;
+    position: relative; }
+  .add-location__input {
+    width: 100%;
+    font-family: inherit;
+    font-size: 1.9rem;
+    color: inherit;
+    border: none;
+    border-radius: 10px;
+    padding: 1rem; }
+  .add-location__icon {
+    position: absolute;
+    right: 1rem;
+    top: 1.5rem;
+    font-size: initial; }
