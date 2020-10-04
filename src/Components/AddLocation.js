@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
 import SearchResults from "./SearchResults";
+import SavedCities from "./SavedCities";
 import axios from "axios";
 
 function AddLocation() {
   const [query, setQuery] = useState("");
   const [results, setResults] = useState([]);
-  const ACCUWEATHER_API_KEY = "G04E9fISCyONB4F0iTgXEn8VGifhFBUg";
-  const API_URL = `http://dataservice.accuweather.com/locations/v1/cities/autocomplete?apikey=${ACCUWEATHER_API_KEY}&q=${query}`;
+  const API_KEY = "5f38a955153345aebbc145451200410";
+  const API_URL = `http://api.weatherapi.com/v1/search.json?key=${API_KEY}&q=${query}`;
 
   function handleChange(e) {
     setQuery(e.target.value);
@@ -19,7 +20,9 @@ function AddLocation() {
       }
       setResults(res.data);
     }
-    fetchData();
+    if (query !== "") {
+      fetchData();
+    }
   });
 
   return (
@@ -36,6 +39,7 @@ function AddLocation() {
           <SearchResults results={results} />
         )}
       </div>
+      <SavedCities />
     </div>
   );
 }

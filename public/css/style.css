@@ -74,38 +74,28 @@ a:visited {
     grid-gap: 5rem;
     grid-template-columns: repeat(auto-fit, minmax(18.2rem, min-content));
     grid-template-rows: repeat(auto-fit, minmax(15rem, max-content)); }
-    .highlights__info > * {
-      border-radius: 30px;
-      padding: 2rem;
-      background-color: #f9fcfb; }
-  .highlights__tile--heading {
-    color: #dfddc7;
-    font-size: 1.7rem; }
-  .highlights__tile--data {
-    line-height: 1;
-    display: flex;
-    align-items: flex-end;
-    color: #333866;
-    font-size: 2rem;
-    margin-top: 1.3rem;
-    margin-bottom: 1.3rem; }
-  .highlights__tile--unit {
-    font-size: 2rem;
-    margin-bottom: .8rem;
-    margin-left: .4rem; }
-  .highlights__tile--comment {
-    font-weight: 100;
-    font-size: 1.3rem; }
-
-.circle {
-  height: 3rem;
-  width: 3rem;
-  text-align: center;
-  border-radius: 50%;
-  background-image: linear-gradient(to right bottom, rgba(255, 189, 80, 0.6), #ffbd50);
-  font-size: 2rem;
-  color: white;
-  margin-right: 2rem; }
+  .highlights__tile {
+    border-radius: 30px;
+    padding: 2rem;
+    background-color: #f9fcfb; }
+    .highlights__tile--heading {
+      color: #dfddc7;
+      font-size: 1.7rem; }
+    .highlights__tile--data {
+      line-height: 1;
+      display: flex;
+      align-items: flex-end;
+      color: #333866;
+      font-size: 2rem;
+      margin-top: 1.3rem;
+      margin-bottom: 1.3rem; }
+    .highlights__tile--unit {
+      font-size: 2rem;
+      margin-bottom: 0.8rem;
+      margin-left: 0.4rem; }
+    .highlights__tile--comment {
+      font-weight: 100;
+      font-size: 1.3rem; }
 
 .user-profile {
   flex: 0 0 25%;
@@ -150,7 +140,7 @@ a:visited {
   border-radius: 50px;
   padding: 4rem;
   display: grid;
-  grid-template-rows: min-content repeat(3, 8rem);
+  grid-template-rows: minmax(min-content, 10rem) min-content;
   align-items: center;
   justify-items: center; }
   .add-location__search {
@@ -182,5 +172,19 @@ a:visited {
   color: inherit;
   border-radius: 10px;
   padding: 1rem; }
-  .search-result__individual:not(:last-child) {
-    border-bottom: 1px solid; }
+  .search-result__individual {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem; }
+    .search-result__individual:not(:last-child) {
+      border-bottom: 1px solid; }
+
+.saved-cities {
+  justify-self: start; }
+  .saved-cities__heading {
+    font-size: 2.4rem; }
+  .saved-cities__tiles {
+    display: flex; }
+    .saved-cities__tiles > * {
+      margin: 1rem 2rem; }
