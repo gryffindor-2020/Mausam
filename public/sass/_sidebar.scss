@@ -31,3 +31,6 @@
     }
   }
 }
+.active > * {
+  background-color: $color-secondary;
+}
