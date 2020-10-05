@@ -29,9 +29,6 @@ a:visited {
   display: flex;
   min-height: 57rem; }
 
-.active > * {
-  background-color: #d9ecf2; }
-
 .sidebar {
   flex: 0 0 10%;
   padding: 3rem;
