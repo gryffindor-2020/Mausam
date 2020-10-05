@@ -15,6 +15,7 @@
     border-radius: 30px;
     padding: 2rem;
     background-color: $color-white;
+    max-width: 14rem;
     &--heading {
       color: $font-color-light;
       font-size: 1.7rem;
@@ -35,6 +36,9 @@
     }
     &--comment {
       font-weight: 100;
+      font-size: 1.3rem;
+    }
+    &--delete {
       font-size: 1.3rem;
     }
   }

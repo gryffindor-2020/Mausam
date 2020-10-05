@@ -16,7 +16,7 @@ function AddLocation() {
     async function fetchData() {
       const res = await axios.get(API_URL);
       if (res.data.length > 5) {
-        res.data.length -= res.data.length - 5;
+        res.data.length = 5;
       }
       setResults(res.data);
     }

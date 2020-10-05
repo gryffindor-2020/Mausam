@@ -1,22 +1,13 @@
 import React from "react";
-import HighlightTile from "./HighlightTile";
+import SavedCityTile from "./SavedCityTile";
 function SavedCities() {
-  const cities = [
-    {
-      value: "Delhi",
-      type: "India",
-    },
-    {
-      value: "Delhi",
-      type: "India",
-    },
-  ];
+  const cities = JSON.parse(localStorage.getItem("SAVED_CITIES_MAUSAM"));
   return (
     <div className="saved-cities">
       <h2 className="saved-cities__heading">Saved Cities</h2>
       <div className="saved-cities__tiles">
         {cities.map((city) => {
-          return <HighlightTile object={city} />;
+          return <SavedCityTile object={city} />;
         })}
       </div>
     </div>
