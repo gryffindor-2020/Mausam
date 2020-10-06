@@ -2,7 +2,7 @@
   border: 2rem solid $color-white;
   border-radius: 50px;
   background-color: $color-secondary;
-  flex-basis: 50%;
+  flex-grow: 1;
   padding: 3rem;
   &__info {
     margin-top: 2rem;

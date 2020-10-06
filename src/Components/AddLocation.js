@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import SearchResults from "./SearchResults";
-import SavedCities from "./SavedCities";
 import axios from "axios";
 
 function AddLocation() {
@@ -29,7 +28,7 @@ function AddLocation() {
     <div className="add-location">
       <div className="add-location__search">
         <input
-          placeholder="Delhi, London, New York and many more..."
+          placeholder="Delhi, New York ..."
           type="text"
           className="add-location__input"
           onChange={handleChange}
@@ -39,7 +38,6 @@ function AddLocation() {
           <SearchResults results={results} />
         )}
       </div>
-      <SavedCities />
     </div>
   );
 }

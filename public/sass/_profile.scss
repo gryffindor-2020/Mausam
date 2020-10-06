@@ -2,15 +2,17 @@
   flex: 0 0 25%;
   display: grid;
   grid-template-columns: repeat(3, minmax(5rem, max-content));
-  grid-template-rows: 10rem 5rem min-content min-content;
-  padding: 2rem;
+  grid-template-rows: 10rem min-content 5rem min-content min-content;
+  padding: 1rem;
   .location {
     grid-column: 1 / 3;
+    grid-row: 2 / 3;
     align-self: end;
+    font-size: 1.4rem;
   }
   .date {
     grid-column: 1 / 3;
-    grid-row: 2 / 3;
+    grid-row: 3 / 4;
     color: $font-color-light;
   }
   .today {
