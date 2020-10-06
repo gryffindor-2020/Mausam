@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext } from "react";
 import Tile from "./HighlightTile";
 import { CityDataContext } from "./Context";
 function Highlights() {
@@ -26,7 +26,6 @@ function Highlights() {
   data1.push(windStatus);
   data1.push(visibility);
   data1.push(humidity);
-  useEffect(() => {});
 
   return (
     <div className="highlights">
@@ -36,7 +35,6 @@ function Highlights() {
           return <Tile object={el} key={index} />;
         })}
       </div>
-      {console.log("City Data", cityData.current.uv)}
     </div>
   );
 }
