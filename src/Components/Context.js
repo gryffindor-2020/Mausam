@@ -1,6 +1,6 @@
 import { createContext } from "react";
 
-export const CityContext = createContext(
+export const CurrentCityContext = createContext(
   localStorage.getItem("ACTIVE_LONG_LAT")
 );
 

@@ -66,14 +66,13 @@ a:visited {
   border: 2rem solid #f9fcfb;
   border-radius: 50px;
   background-color: #d9ecf2;
-  flex: 1;
-  padding: 3rem 3rem 1rem; }
+  flex-basis: 50%;
+  padding: 3rem; }
   .highlights__info {
     margin-top: 2rem;
     display: grid;
-    grid-gap: 5rem;
-    grid-template-columns: repeat(auto-fit, minmax(18.2rem, min-content));
-    grid-template-rows: repeat(auto-fit, minmax(15rem, max-content)); }
+    grid-gap: 3rem;
+    grid-template-columns: repeat(auto-fit, minmax(13rem, max-content)); }
   .highlights__tile {
     border-radius: 30px;
     padding: 2rem;
@@ -81,7 +80,7 @@ a:visited {
     max-width: 14rem; }
     .highlights__tile--heading {
       color: #dfddc7;
-      font-size: 1.7rem; }
+      font-size: 1.2rem; }
     .highlights__tile--data {
       line-height: 1;
       display: flex;
@@ -91,7 +90,7 @@ a:visited {
       margin-top: 1.3rem;
       margin-bottom: 1.3rem; }
     .highlights__tile--unit {
-      font-size: 2rem;
+      font-size: 1.6rem;
       margin-bottom: 0.8rem;
       margin-left: 0.4rem; }
     .highlights__tile--comment {

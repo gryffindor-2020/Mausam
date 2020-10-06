@@ -2,14 +2,13 @@
   border: 2rem solid $color-white;
   border-radius: 50px;
   background-color: $color-secondary;
-  flex: 1;
-  padding: 3rem 3rem 1rem;
+  flex-basis: 50%;
+  padding: 3rem;
   &__info {
     margin-top: 2rem;
     display: grid;
-    grid-gap: 5rem;
-    grid-template-columns: repeat(auto-fit, minmax(18.2rem, min-content));
-    grid-template-rows: repeat(auto-fit, minmax(15rem, max-content));
+    grid-gap: 3rem;
+    grid-template-columns: repeat(auto-fit, minmax(13rem, max-content));
   }
   &__tile {
     border-radius: 30px;
@@ -18,7 +17,7 @@
     max-width: 14rem;
     &--heading {
       color: $font-color-light;
-      font-size: 1.7rem;
+      font-size: 1.2rem;
     }
     &--data {
       line-height: 1;
@@ -30,7 +29,7 @@
       margin-bottom: 1.3rem;
     }
     &--unit {
-      font-size: 2rem;
+      font-size: 1.6rem;
       margin-bottom: 0.8rem;
       margin-left: 0.4rem;
     }

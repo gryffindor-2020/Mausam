@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { CityContext } from "./Context";
 
 function Prof() {
   const [isLoading, setIsLoading] = useState(true);
   const [location, setLocation] = useState({});
   const [current, setCurrent] = useState({});
-
+  const city = "Delhi";
   const API_KEY = "5f38a955153345aebbc145451200410";
   const API_URL = `http://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${city}`;
 
@@ -24,10 +23,10 @@ function Prof() {
   return (
     <div className="user-profile">
       <div className="location">
-        <h2 className="location__city">The Hague,</h2>
-        <h3 className="location__country">Netherlands</h3>
+        <h2 className="location__city">{location.name}</h2>
+        <h3 className="location__country">{location.country}</h3>
       </div>
-      <div className="date">Dec 31,2019</div>
+      <div className="date">{location.localtime}</div>
       <h1 className="today">Today</h1>
       <div className="temperature">
         {!isLoading && (
@@ -39,7 +38,6 @@ function Prof() {
         )}
         <h1 className="temperature__value">{current.temp_c}</h1>
         <span className="temperature__unit">&#176; C</span>
-        {console.log(current.condition)}
       </div>
     </div>
   );
