@@ -48,3 +48,6 @@ a:visited {
   display: flex;
   min-height: 57rem;
 }
+.active > * {
+  background-color: $color-secondary;
+}

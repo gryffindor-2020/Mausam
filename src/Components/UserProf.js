@@ -1,14 +1,11 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
-
 import { CityContext } from "./Context";
 
 function Prof() {
   const [isLoading, setIsLoading] = useState(true);
   const [location, setLocation] = useState({});
   const [current, setCurrent] = useState({});
-
-  const { city, setCity } = useContext(CityContext);
 
   const API_KEY = "5f38a955153345aebbc145451200410";
   const API_URL = `http://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${city}`;
@@ -27,10 +24,10 @@ function Prof() {
   return (
     <div className="user-profile">
       <div className="location">
-        <h2 className="location__city">{location.region}</h2>
-        <h3 className="location__country">{location.country}</h3>
+        <h2 className="location__city">The Hague,</h2>
+        <h3 className="location__country">Netherlands</h3>
       </div>
-      <div className="date">{location.localtime}</div>
+      <div className="date">Dec 31,2019</div>
       <h1 className="today">Today</h1>
       <div className="temperature">
         {!isLoading && (
