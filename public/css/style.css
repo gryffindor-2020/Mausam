@@ -155,9 +155,7 @@ a:visited {
     border-radius: 10px;
     padding: 1rem; }
     .add-location__input:focus {
-      outline: none;
-      margin-left: -2rem;
-      width: 120%; }
+      outline: none; }
   .add-location__icon {
     position: absolute;
     right: 1rem;
@@ -165,12 +163,13 @@ a:visited {
     font-size: initial; }
 
 .search-result {
+  cursor: pointer;
   position: absolute;
   z-index: 10;
   background-color: #f9fcfb;
   width: 100%;
   font-family: inherit;
-  font-size: 1.9rem;
+  font-size: inherit;
   color: inherit;
   border-radius: 10px;
   padding: 1rem; }
@@ -181,13 +180,3 @@ a:visited {
     padding: 1.2rem; }
     .search-result__individual:not(:last-child) {
       border-bottom: 1px solid; }
-
-.saved-cities {
-  justify-self: start; }
-  .saved-cities__heading {
-    font-size: 2.4rem; }
-  .saved-cities__tiles {
-    display: flex;
-    flex-wrap: wrap; }
-    .saved-cities__tiles > * {
-      margin: 1rem 2rem; }

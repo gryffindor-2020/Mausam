@@ -11,6 +11,8 @@ function SearchResult(props) {
 
   function handleClick() {
     setCity(data.lat + "," + data.lon);
+    console.log(city);
+    props.handleSelectCity();
   }
 
   useEffect(() => {
@@ -20,7 +22,7 @@ function SearchResult(props) {
       });
     }
     fetchData();
-  }, []);
+  });
   return (
     <div className="search-result__individual" onClick={handleClick}>
       <span className="search-result__text">{data.name}</span>

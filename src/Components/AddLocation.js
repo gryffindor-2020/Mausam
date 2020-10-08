@@ -25,12 +25,13 @@ function AddLocation() {
     if (query !== "") {
       fetchData();
     }
-  });
+  }, [query, API_URL]);
 
   return (
     <div className="add-location">
       <div className="add-location__search">
         <input
+          value={query}
           placeholder="Delhi, New York ..."
           type="text"
           className="add-location__input"
@@ -39,12 +40,13 @@ function AddLocation() {
         {query === "" && <i className="fas fa-search add-location__icon" />}
         {query !== "" && (
           <i
+            type="button"
             className="fas fa-times add-location__icon"
             onClick={handleClick}
           />
         )}
         {query !== "" && results.length !== 0 && (
-          <SearchResults results={results} />
+          <SearchResults results={results} handleSelectCity={handleClick} />
         )}
       </div>
     </div>

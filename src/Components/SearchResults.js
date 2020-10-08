@@ -5,7 +5,13 @@ function SearchResults(props) {
   return (
     <div className="search-result">
       {props.results.map((result) => {
-        return <SearchResult data={result} key={result.id} />;
+        return (
+          <SearchResult
+            data={result}
+            key={result.id}
+            handleSelectCity={props.handleSelectCity}
+          />
+        );
       })}
     </div>
   );
