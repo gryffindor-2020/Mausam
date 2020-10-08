@@ -4,13 +4,12 @@ import axios from "axios";
 
 import Nav from "./Nav";
 import Dashboard from "./Dashboard";
-import AddLocation from "./AddLocation";
 import { CurrentCityContext, CityDataContext } from "./Context";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
   const [city, setCity] = useState("Delhi");
-  const [cityData, setCityData] = useState({});
+  const [cityData, setCityData] = useState();
   const API_KEY = "5f38a955153345aebbc145451200410";
   const API_URL = `http://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${city}`;
 
@@ -27,16 +26,15 @@ function App() {
   return (
     <Router>
       {!isLoading && (
-        <CityDataContext.Provider value={{ cityData, setCityData }}>
-          <CurrentCityContext.Provider value={{ city, setCity }}>
+        <CurrentCityContext.Provider value={{ city, setCity }}>
+          <CityDataContext.Provider value={{ cityData, setCityData }}>
             <div className="container">
               <Nav />
               <Route exact path="/" component={Dashboard} />
               <Route exact path="/dashboard" component={Dashboard} />
-              <Route exact path="/add-location" component={AddLocation} />
             </div>
-          </CurrentCityContext.Provider>
-        </CityDataContext.Provider>
+          </CityDataContext.Provider>
+        </CurrentCityContext.Provider>
       )}
     </Router>
   );

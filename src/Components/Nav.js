@@ -16,12 +16,6 @@ function Nav() {
             <h2 className="menu__item--text">Dashboard</h2>
           </div>
         </NavLink>
-        <NavLink to="add-location">
-          <div className="menu__item">
-            <i className="fas fa-search-location menu__item--icon" />
-            <h2 className="menu__item--text">Add City</h2>
-          </div>
-        </NavLink>
       </div>
     </nav>
   );

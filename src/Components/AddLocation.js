@@ -11,6 +11,9 @@ function AddLocation() {
   function handleChange(e) {
     setQuery(e.target.value);
   }
+  function handleClick() {
+    setQuery("");
+  }
   useEffect(() => {
     async function fetchData() {
       const res = await axios.get(API_URL);
@@ -33,7 +36,13 @@ function AddLocation() {
           className="add-location__input"
           onChange={handleChange}
         />
-        <i className="fas fa-search add-location__icon" />
+        {query === "" && <i className="fas fa-search add-location__icon" />}
+        {query !== "" && (
+          <i
+            className="fas fa-times add-location__icon"
+            onClick={handleClick}
+          />
+        )}
         {query !== "" && results.length !== 0 && (
           <SearchResults results={results} />
         )}
