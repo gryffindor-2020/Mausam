@@ -5,7 +5,7 @@ import { CurrentCityContext, CityDataContext } from "./Context";
 function SearchResult(props) {
   const data = props.data;
   const { city, setCity } = useContext(CurrentCityContext);
-  const { setCityData } = useContext(CityDataContext);
+  const {  setCityData } = useContext(CityDataContext);
   const API_KEY = "5f38a955153345aebbc145451200410";
   const API_URL = `http://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${city}`;
 
@@ -22,7 +22,7 @@ function SearchResult(props) {
       });
     }
     fetchData();
-  });
+  },[API_URL,setCityData]);
   return (
     <div className="search-result__individual" onClick={handleClick}>
       <span className="search-result__text">{data.name}</span>

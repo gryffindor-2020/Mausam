@@ -3,6 +3,10 @@
   padding: 3rem;
   display: flex;
   flex-direction: column;
+  @media only screen and (max-width: $bp-large) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
   .logo {
     display: flex;
     align-items: center;
@@ -28,6 +32,9 @@
         border-radius: 5px;
         background-color: $color-white;
       }
+    }
+    @media only screen and (max-width: $bp-large) {
+      margin-top: 0;
     }
   }
 }
