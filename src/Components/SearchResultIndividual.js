@@ -1,28 +1,15 @@
 import React, { useContext, useEffect } from "react";
 import axios from "axios";
-import { CurrentCityContext, CityDataContext } from "./Context";
 
 function SearchResult(props) {
   const data = props.data;
-  const { city, setCity } = useContext(CurrentCityContext);
-  const {  setCityData } = useContext(CityDataContext);
   const API_KEY = "5f38a955153345aebbc145451200410";
   const API_URL = `http://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${city}`;
 
   function handleClick() {
-    setCity(data.lat + "," + data.lon);
-    console.log(city);
-    props.handleSelectCity();
+    // console.log(city);
   }
 
-  useEffect(() => {
-    function fetchData() {
-      axios.get(API_URL).then((res) => {
-        setCityData(res.data);
-      });
-    }
-    fetchData();
-  },[API_URL,setCityData]);
   return (
     <div className="search-result__individual" onClick={handleClick}>
       <span className="search-result__text">{data.name}</span>

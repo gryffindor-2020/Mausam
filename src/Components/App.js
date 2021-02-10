@@ -4,7 +4,6 @@ import axios from "axios";
 
 import Nav from "./Nav";
 import Dashboard from "./Dashboard";
-import { CurrentCityContext, CityDataContext } from "./Context";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -26,15 +25,11 @@ function App() {
   return (
     <Router>
       {!isLoading && (
-        <CurrentCityContext.Provider value={{ city, setCity }}>
-          <CityDataContext.Provider value={{ cityData, setCityData }}>
-            <div className="container">
-              <Nav />
-              <Route exact path="/" component={Dashboard} />
-              <Route exact path="/dashboard" component={Dashboard} />
-            </div>
-          </CityDataContext.Provider>
-        </CurrentCityContext.Provider>
+        <div className="container">
+          <Nav />
+          <Route exact path="/" component={Dashboard} />
+          <Route exact path="/dashboard" component={Dashboard} />
+        </div>
       )}
     </Router>
   );
