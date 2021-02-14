@@ -5,10 +5,6 @@
   grid-template-rows: minmax(min-content, 10rem) min-content;
   align-items: center;
   justify-items: center;
-  @media only screen and (max-width: $bp-large) {
-    justify-items: stretch;
-    margin: 2rem;
-  }
   &__search {
     position: relative;
   }

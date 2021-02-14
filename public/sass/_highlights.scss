@@ -4,9 +4,6 @@
   background-color: $color-secondary;
   flex-grow: 1;
   padding: 3rem;
-  @media only screen and (max-width: $bp-large) {
-    order: 3;
-  }
   &__info {
     margin-top: 2rem;
     display: grid;

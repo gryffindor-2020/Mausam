@@ -13,10 +13,6 @@ $font-color-light: #dfddc7;
 // FONT VARIABLES
 $font-primary: "Poppins", sans-serif;
 
-//MEDIA QUERIES
-$bp-largest: 68.75em; //1100px
-$bp-large: 62.5em; //1000px
-
 *,
 *::before,
 *::after {
@@ -28,9 +24,9 @@ html {
   box-sizing: border-box;
   font-size: 62.5%; //1 rem = 10px
 
-  @media only screen and (max-width: $bp-largest) {
-    font-size: 50%; //1rem = 8px
-  }
+  // @media only screen and (max-width:$bp-largest){
+  //     font-size: 50%; //1rem = 8px
+  // }
 }
 body {
   font-family: $font-primary;
@@ -51,12 +47,6 @@ a:visited {
   overflow: hidden;
   display: flex;
   min-height: 57rem;
-  @media only screen and (max-width: $bp-large) {
-    flex-direction: column;
-    max-width: 70rem;
-    margin: 4rem auto;
-    padding: 2rem;
-  }
 }
 .active > * {
   background-color: $color-secondary;
