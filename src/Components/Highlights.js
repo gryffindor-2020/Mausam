@@ -2,27 +2,27 @@ import React from "react";
 import Tile from "./HighlightTile";
 function Highlights() {
   let data1 = [];
-  // const uv = { type: "UV Index", value: cityData.current.uv };
-  // const windStatus = {
-  //   type: "Wind Status",
-  //   value: cityData.current.wind_kph,
-  //   unit: "km/hr",
-  //   comment: cityData.current.wind_dir,
-  // };
-  // const visibility = {
-  //   type: "Visibility",
-  //   value: cityData.current.vis_km,
-  //   unit: "km",
-  // };
-  // const humidity = {
-  //   type: "Humidity",
-  //   value: cityData.current.humidity,
-  //   unit: "%",
-  // };
-  // data1.push(uv);
-  // data1.push(windStatus);
-  // data1.push(visibility);
-  // data1.push(humidity);
+  const uv = { type: "UV Index", value: 8 };
+  const windStatus = {
+    type: "Wind Status",
+    value: 9,
+    unit: "km/hr",
+    comment: "WNW",
+  };
+  const visibility = {
+    type: "Visibility",
+    value: 2,
+    unit: "km",
+  };
+  const humidity = {
+    type: "Humidity",
+    value: 39,
+    unit: "%",
+  };
+  data1.push(uv);
+  data1.push(windStatus);
+  data1.push(visibility);
+  data1.push(humidity);
 
   return (
     <div className="highlights">

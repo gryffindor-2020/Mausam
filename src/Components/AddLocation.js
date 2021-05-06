@@ -1,37 +1,13 @@
-import React, { useEffect, useState } from "react";
-import SearchResults from "./SearchResults";
-import axios from "axios";
+import React from "react";
 
 function AddLocation() {
-  const [query, setQuery] = useState("");
-  const [results, setResults] = useState([]);
-  const API_KEY = "5f38a955153345aebbc145451200410";
-  const API_URL = `http://api.weatherapi.com/v1/search.json?key=${API_KEY}&q=${query}`;
-
-  function handleChange(e) {
-    setQuery(e.target.value);
-  }
-  function handleClick() {
-    setQuery("");
-  }
-  useEffect(() => {
-    async function fetchData() {
-      const res = await axios.get(API_URL);
-      if (res.data.length > 5) {
-        res.data.length = 5;
-      }
-      setResults(res.data);
-    }
-    if (query !== "") {
-      fetchData();
-    }
-  }, [query, API_URL]);
+  // const API_KEY = "5f38a955153345aebbc145451200410";
+  // const API_URL = `http://api.weatherapi.com/v1/search.json?key=${API_KEY}&q=${query}`;
 
   return (
     <div className="add-location">
-      <div className="add-location__search">
-        <input
-          value={query}
+      {/* <div className="add-location__search">
+        <InputEvent
           placeholder="Delhi, New York ..."
           type="text"
           className="add-location__input"
@@ -48,7 +24,7 @@ function AddLocation() {
         {query !== "" && results.length !== 0 && (
           <SearchResults results={results} handleSelectCity={handleClick} />
         )}
-      </div>
+      </div> */}
     </div>
   );
 }
