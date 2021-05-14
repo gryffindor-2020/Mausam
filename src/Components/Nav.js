@@ -10,7 +10,7 @@ function Nav() {
         </div>
       </Link>
       <div className="menu">
-        <NavLink to="dashboard">
+        <NavLink to="dashboard" className="active">
           <div className="menu__item">
             <i className="fas fa-home menu__item--icon"></i>
             <h2 className="menu__item--text">Dashboard</h2>
