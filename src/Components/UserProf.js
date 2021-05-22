@@ -17,8 +17,10 @@ function Prof({ currentCity: { location, current } }) {
           className="temperature__img"
           alt="Current Weather icon"
         />
-        <h1 className="temperature__value">{current.temp_c}</h1>
-        <span className="temperature__unit">&#176; C</span>
+        <h1 className="temperature__value">
+          {current.temp_c}
+          <span className="temperature__unit">&#176; C</span>
+        </h1>
       </div>
     </div>
   );

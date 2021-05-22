@@ -129,7 +129,8 @@ a:visited {
     .user-profile .temperature__img {
       width: 50%; }
     .user-profile .temperature__value {
-      font-size: 4.5rem; }
+      font-size: 4.5rem;
+      display: flex; }
     .user-profile .temperature__unit {
       align-self: flex-start;
       margin-top: 0.4rem;
