@@ -69,17 +69,20 @@ a:visited {
   flex-grow: 1;
   padding: 3rem; }
   .highlights__info {
-    margin-top: 2rem;
     display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
     grid-gap: 3rem;
-    grid-template-columns: repeat(auto-fit, minmax(13rem, max-content)); }
+    align-items: start;
+    margin-top: 2rem;
+    justify-content: center; }
   .highlights__tile {
     border-radius: 30px;
     padding: 2rem;
     background-color: #f9fcfb;
-    max-width: 14rem; }
+    max-width: 14rem;
+    min-height: 14rem; }
     .highlights__tile--heading {
-      color: #dfddc7;
+      color: #564a4a;
       font-size: 1.2rem; }
     .highlights__tile--data {
       line-height: 1;
@@ -113,7 +116,8 @@ a:visited {
   .user-profile .date {
     grid-column: 1 / 3;
     grid-row: 3 / 4;
-    color: #dfddc7; }
+    color: #564a4a;
+    font-size: 0.9rem; }
   .user-profile .today {
     grid-column: 1 / -1;
     justify-self: center;
