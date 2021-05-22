@@ -5,16 +5,19 @@
   flex-grow: 1;
   padding: 3rem;
   &__info {
-    margin-top: 2rem;
     display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
     grid-gap: 3rem;
-    grid-template-columns: repeat(auto-fit, minmax(13rem, max-content));
+    align-items: start;
+    margin-top: 2rem;
+    justify-content: center;
   }
   &__tile {
     border-radius: 30px;
     padding: 2rem;
     background-color: $color-white;
     max-width: 14rem;
+    min-height: 14rem;
     &--heading {
       color: $font-color-light;
       font-size: 1.2rem;
