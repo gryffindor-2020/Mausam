@@ -3,7 +3,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 import Nav from "./Nav";
 import Dashboard from "./Dashboard";
 
-function App(props) {
+function App() {
   return (
     <Router>
       <div className="container">
