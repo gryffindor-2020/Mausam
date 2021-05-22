@@ -1,8 +1,6 @@
 import { CityActionTypes } from "./city.types";
 
-const INITIAL_STATE = {
-  city: null,
-};
+const INITIAL_STATE = null;
 const cityReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
     case CityActionTypes.SET_CURRENT_CITY:
