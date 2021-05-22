@@ -43,9 +43,10 @@ function Dashboard(props) {
         });
         setIsLoading(false);
       });
-  });
+  },[]);
   return (
     <React.Fragment>
+      {console.log(isLoading)}
       <HighlightsWithSpinner isLoading={isLoading} city={data1} />
       <ProfileWithSpinner isLoading={isLoading} />
     </React.Fragment>
