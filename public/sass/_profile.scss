@@ -1,5 +1,5 @@
 .user-profile {
-  flex: 0 0 25%;
+  flex: 0 0 30%;
   display: grid;
   grid-template-columns: repeat(3, minmax(5rem, max-content));
   grid-template-rows: 10rem min-content 5rem min-content min-content;
@@ -14,6 +14,7 @@
     grid-column: 1 / 3;
     grid-row: 3 / 4;
     color: $font-color-light;
+    font-size: 0.9rem;
   }
   .today {
     grid-column: 1 / -1;
