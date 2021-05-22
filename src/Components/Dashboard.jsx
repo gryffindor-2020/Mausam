@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, {useState,useEffect} from "react";
 import { connect } from "react-redux";
 import Highlights from "./Highlights";
@@ -12,28 +13,6 @@ const HighlightsWithSpinner = withSpinner(Highlights);
 const ProfileWithSpinner = withSpinner(Profile);
 function Dashboard(props) {
   const [isLoading, setIsLoading] = useState(true)
-  let data1 = [];
-  const uv = { type: "UV Index", value: 8 };
-  const windStatus = {
-    type: "Wind Status",
-    value: 9,
-    unit: "km/hr",
-    comment: "WNW",
-  };
-  const visibility = {
-    type: "Visibility",
-    value: 2,
-    unit: "km",
-  };
-  const humidity = {
-    type: "Humidity",
-    value: 39,
-    unit: "%",
-  };
-  data1.push(uv);
-  data1.push(windStatus);
-  data1.push(visibility);
-  data1.push(humidity);
   useEffect(() => {
     fetch(API_URL)
       .then((res) => res.json()) 
@@ -47,7 +26,7 @@ function Dashboard(props) {
   return (
     <React.Fragment>
       {console.log(isLoading)}
-      <HighlightsWithSpinner isLoading={isLoading} city={data1} />
+      <HighlightsWithSpinner isLoading={isLoading} />
       <ProfileWithSpinner isLoading={isLoading} />
     </React.Fragment>
   );
