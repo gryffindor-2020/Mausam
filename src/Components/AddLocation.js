@@ -14,7 +14,7 @@ function AddLocation() {
     setQuery("");
   }
   useEffect(() => {
-    const API_URL = `http://api.weatherapi.com/v1/search.json?key=${API_KEY}&q=${query}`;
+    const API_URL = `https://api.weatherapi.com/v1/search.json?key=${API_KEY}&q=${query}`;
     if (query.length >= 3) {
       fetch(API_URL)
         .then((res) => res.json())

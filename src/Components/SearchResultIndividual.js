@@ -7,7 +7,7 @@ function SearchResult({
   data: { name, region, country, lat, lon },
 }) {
   function handleClick() {
-    const API_URL = `http://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${lat}${" "}${lon}&aqi=yes`;
+    const API_URL = `https://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${lat}${" "}${lon}&aqi=yes`;
     fetch(API_URL)
       .then((res) => res.json())
       .then((data) => {

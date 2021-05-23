@@ -24,7 +24,7 @@ function App(props) {
         setIsIPLoading(false);
       });
 
-    const API_URL = `http://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${IPAddress}&aqi=yes`;
+    const API_URL = `https://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=mumbai&aqi=yes`;
     if (isIPLoading === false) {
       fetch(API_URL)
         .then((res) => res.json())
