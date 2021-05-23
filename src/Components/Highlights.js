@@ -23,6 +23,21 @@ function Highlights({ currentCity: { current } }) {
         <Tile
           object={{ type: "Humidity", value: current.humidity, unit: "%" }}
         />
+        <Tile
+          object={{
+            type: "PM2.5",
+            value: current.air_quality.pm2_5,
+            unit: "µg/m³",
+          }}
+        />
+        <Tile
+          object={{
+            type: "US - EPA standard",
+            value: current.air_quality["us-epa-index"],
+            unit: "",
+          }}
+        />
+        {console.log(current.air_quality)}
       </div>
     </div>
   );
