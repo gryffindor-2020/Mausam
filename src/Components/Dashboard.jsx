@@ -25,7 +25,6 @@ function Dashboard(props) {
   },[]);
   return (
     <React.Fragment>
-      {console.log(isLoading)}
       <HighlightsWithSpinner isLoading={isLoading} />
       <ProfileWithSpinner isLoading={isLoading} />
     </React.Fragment>
