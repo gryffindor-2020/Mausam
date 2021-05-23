@@ -20,7 +20,6 @@ function App(props) {
     fetch(API_URL_IP)
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         setIPAddress(data.IPv4);
         setIsIPLoading(false);
       });
