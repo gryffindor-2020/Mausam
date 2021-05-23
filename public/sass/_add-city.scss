@@ -1,10 +1,8 @@
 .add-location {
   grid-column: 1 / -1;
   border-radius: 50px;
-  display: grid;
-  grid-template-rows: minmax(min-content, 10rem) min-content;
-  align-items: center;
-  justify-items: center;
+  align-self: center;
+  margin: 2rem 0;
   &__search {
     position: relative;
   }
@@ -13,10 +11,12 @@
     font-family: inherit;
     font-size: 1.4rem;
     color: inherit;
-    border: none;
     border-radius: 10px;
+    border: none;
     padding: 1rem;
     &:focus {
+      border: 0.1rem solid;
+      transform: translateY(-0.1rem);
       outline: none;
     }
   }
@@ -31,13 +31,14 @@
   cursor: pointer;
   position: absolute;
   z-index: 10;
-  background-color: $color-white;
+  background-color: $color-secondary;
   width: 100%;
   font-family: inherit;
   font-size: inherit;
   color: inherit;
   border-radius: 10px;
   padding: 1rem;
+  margin-top: 1rem;
   &__individual {
     display: flex;
     justify-content: space-between;
