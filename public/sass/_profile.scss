@@ -13,6 +13,7 @@
     font-size: 1.4rem;
     @media only screen and (max-width: 900px) {
       grid-column: 1/2;
+      font-size: 2rem;
     }
   }
   .date {
@@ -29,6 +30,9 @@
     grid-column: 1 / -1;
     justify-self: center;
     margin-bottom: 1rem;
+    @media only screen and (max-width: 900px) {
+      font-size: 3rem;
+    }
   }
   .temperature {
     grid-column: 1 / -1;
