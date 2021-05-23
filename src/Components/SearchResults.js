@@ -1,17 +1,11 @@
 import React from "react";
 import SearchResult from "./SearchResultIndividual";
 
-function SearchResults(props) {
+function SearchResults({ results }) {
   return (
     <div className="search-result">
-      {props.results.map((result) => {
-        return (
-          <SearchResult
-            data={result}
-            key={result.id}
-            handleSelectCity={props.handleSelectCity}
-          />
-        );
+      {results.map((result) => {
+        return <SearchResult data={result} key={result.id} />;
       })}
     </div>
   );
