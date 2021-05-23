@@ -8,22 +8,35 @@ import withSpinner from "./spinner/spinner";
 
 import { setCurrentCity } from "../redux/city/city.actions";
 const API_KEY = "5f38a955153345aebbc145451200410";
-const API_URL = `http://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=mumbai&aqi=yes`;
 
 const DashboardWithSpinner = withSpinner(Dashboard);
 
 function App(props) {
   const [isLoading, setIsLoading] = useState(true);
+  const [IPAddress, setIPAddress] = useState("");
+  const [isIPLoading, setIsIPLoading] = useState(true);
   useEffect(() => {
-    fetch(API_URL)
+    const API_URL_IP = `https://geolocation-db.com/json/e4f42070-ad2d-11eb-adf1-cf51da9b3410`;
+    fetch(API_URL_IP)
       .then((res) => res.json())
       .then((data) => {
-        props.setCurrentCity({
-          ...data,
-        });
-        setIsLoading(false);
+        console.log(data);
+        setIPAddress(data.IPv4);
+        setIsIPLoading(false);
       });
-  }, []);
+
+    const API_URL = `http://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${IPAddress}`;
+    if (isIPLoading === false) {
+      fetch(API_URL)
+        .then((res) => res.json())
+        .then((data) => {
+          props.setCurrentCity({
+            ...data,
+          });
+          setIsLoading(false);
+        });
+    }
+  }, [isIPLoading]);
   return (
     <Router>
       <div className="container">
