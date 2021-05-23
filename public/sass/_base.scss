@@ -13,6 +13,12 @@ $font-color-light: #564a4a;
 // FONT VARIABLES
 $font-primary: "Poppins", sans-serif;
 
+//MEDIA QUERIES
+$bp-largest: 68.75em; //1100px
+$bp-large: 62.5em; //1000px
+$bp-medium: 56.25em; //900px
+$bp-small: 37.5em; //600px
+
 *,
 *::before,
 *::after {
@@ -24,9 +30,12 @@ html {
   box-sizing: border-box;
   font-size: 62.5%; //1 rem = 10px
 
-  // @media only screen and (max-width:$bp-largest){
-  //     font-size: 50%; //1rem = 8px
-  // }
+  @media only screen and (max-width: $bp-largest) {
+    font-size: 60%; //1rem = 9.6px
+  }
+  @media only screen and (max-width: $bp-large) {
+    font-size: 53%; //1rem = 8px
+  }
 }
 body {
   font-family: $font-primary;
@@ -39,7 +48,7 @@ a:visited {
   text-decoration: none;
 }
 .container {
-  max-width: 100rem;
+  max-width: 80vw;
   margin: 8rem auto;
   box-shadow: 0 2rem 6rem rgba($color: black, $alpha: 0.2);
   background-color: $color-white;
@@ -47,6 +56,9 @@ a:visited {
   overflow: hidden;
   display: flex;
   min-height: 57rem;
+  @media only screen and (max-width: 900px) {
+    flex-direction: column;
+  }
 }
 .active > * {
   background-color: $color-secondary;

@@ -1,8 +1,14 @@
 .sidebar {
   flex: 0 0 10%;
   padding: 3rem;
+
   display: flex;
   flex-direction: column;
+  @media only screen and (max-width: 900px) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
   .logo {
     display: flex;
     align-items: center;
@@ -16,6 +22,10 @@
   }
   .menu {
     margin-top: 10rem;
+    @media only screen and (max-width: 900px) {
+      margin-top: 0;
+      visibility: hidden;
+    }
     &__item {
       display: flex;
       align-items: center;

@@ -7,7 +7,6 @@
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
     "axios": "^0.21.1",
-    "node-sass": "^4.14.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-redux": "^7.2.2",
@@ -22,8 +21,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "dev": "npm-run-all --parallel start watch:sass",
-    "dev2": "concurrently \"npm start\" \"npm run watch:sass\""
+    "dev": "concurrently \"npm start\" \"npm run watch:sass\""
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -41,6 +39,7 @@
     ]
   },
   "devDependencies": {
-    "concurrently": "^5.3.0"
+    "concurrently": "^5.3.0",
+    "node-sass": "^4.14.1"
   }
 }

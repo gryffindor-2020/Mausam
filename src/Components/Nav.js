@@ -1,14 +1,12 @@
 import React from "react";
-import { NavLink, Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 function Nav() {
   return (
     <nav className="sidebar">
-      <Link to="/">
-        <div className="logo">
-          <img className="logo__img" src={require("../logo.png")} alt="Logo" />
-          <h2 className="logo__text">Mausam</h2>
-        </div>
-      </Link>
+      <div className="logo">
+        <img className="logo__img" src={require("../logo.png")} alt="Logo" />
+        <h2 className="logo__text">Mausam</h2>
+      </div>
       <div className="menu">
         <NavLink to="dashboard" className="active">
           <div className="menu__item">
