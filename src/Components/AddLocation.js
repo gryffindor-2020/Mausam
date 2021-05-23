@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import SearchResults from "./SearchResults";
+import store from "./../redux/store";
+
 function AddLocation() {
   const API_KEY = "5f38a955153345aebbc145451200410";
 
@@ -18,6 +20,9 @@ function AddLocation() {
         .then((res) => res.json())
         .then((data) => setResults(data.slice(0, 4)));
     }
+    store.subscribe(() => {
+      handleClick();
+    });
   }, [query]);
   return (
     <div className="add-location">
