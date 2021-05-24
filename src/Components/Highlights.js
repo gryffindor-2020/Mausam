@@ -37,7 +37,6 @@ function Highlights({ currentCity: { current } }) {
             unit: "",
           }}
         />
-        {console.log(current.air_quality)}
       </div>
     </div>
   );
