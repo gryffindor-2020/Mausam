@@ -36,7 +36,10 @@ a:visited {
   min-height: 57rem; }
   @media only screen and (max-width: 900px) {
     .container {
-      flex-direction: column; } }
+      max-width: 92vw;
+      margin: 2rem auto;
+      flex-direction: column;
+      padding: 1rem; } }
 
 .active > * {
   background-color: #d9ecf2; }
@@ -96,6 +99,9 @@ a:visited {
     align-items: start;
     margin-top: 2rem;
     justify-content: center; }
+    @media only screen and (max-width: 56.25em) {
+      .highlights__info {
+        grid-template-columns: repeat(auto-fit, minmax(10%, 44%)); } }
   .highlights__tile {
     border-radius: 30px;
     padding: 2rem;
@@ -168,7 +174,7 @@ a:visited {
       @media only screen and (max-width: 900px) {
         .user-profile .temperature__value {
           flex-grow: 1;
-          font-size: 8.5rem; } }
+          font-size: 6.3rem; } }
     .user-profile .temperature__unit {
       align-self: flex-start;
       margin-top: 0.4rem;

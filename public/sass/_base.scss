@@ -57,7 +57,10 @@ a:visited {
   display: flex;
   min-height: 57rem;
   @media only screen and (max-width: 900px) {
+    max-width: 92vw;
+    margin: 2rem auto;
     flex-direction: column;
+    padding: 1rem;
   }
 }
 .active > * {
