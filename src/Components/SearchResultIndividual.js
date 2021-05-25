@@ -1,3 +1,4 @@
+import axios from "axios";
 import React from "react";
 import { connect } from "react-redux";
 import { setCurrentCity } from "../redux/city/city.actions";
@@ -8,17 +9,20 @@ function SearchResult({
 }) {
   function handleClick() {
     const API_URL = `https://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${lat}${" "}${lon}&aqi=yes`;
-    fetch(API_URL)
-      .then((res) => res.json())
-      .then((data) => {
+    axios
+      .get(API_URL)
+      .then((res) => {
         setCurrentCity({
-          ...data,
+          ...res.data,
         });
+      })
+      .catch((err) => {
+        console.log(err);
       });
   }
   return (
     <div className="search-result__individual" onClick={handleClick}>
-      <span className="search-result__text">{`${name},${region},${country}`}</span>
+      <span className="search-result__text">{`${name},${country}`}</span>
       <i className="fas fa-plus-square search-result__icon" />
     </div>
   );
