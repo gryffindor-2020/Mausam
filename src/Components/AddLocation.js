@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import SearchResults from "./SearchResults";
 import store from "./../redux/store";
+import axios from "axios";
 
 function AddLocation() {
   const API_KEY = "5f38a955153345aebbc145451200410";
@@ -16,9 +17,7 @@ function AddLocation() {
   useEffect(() => {
     const API_URL = `https://api.weatherapi.com/v1/search.json?key=${API_KEY}&q=${query}`;
     if (query.length >= 3) {
-      fetch(API_URL)
-        .then((res) => res.json())
-        .then((data) => setResults(data.slice(0, 4)));
+      axios.get(API_URL).then((res) => setResults(res.data.slice(0, 4)));
     }
     store.subscribe(() => {
       handleClick();
@@ -42,9 +41,7 @@ function AddLocation() {
             onClick={handleClick}
           />
         )}
-        {query !== "" && results.length !== 0 && (
-          <SearchResults results={results} />
-        )}
+        {query !== "" && <SearchResults results={results} />}
       </div>
     </div>
   );
