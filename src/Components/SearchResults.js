@@ -3,7 +3,10 @@ import SearchResultIndividual from "./SearchResultIndividual";
 
 function SearchResults({ results }) {
   return (
-    <div className="search-result">
+    <div
+      className="search-result"
+      style={results.length === 0 ? { cursor: "default" } : null}
+    >
       {results.length === 0 && (
         <div className="search-result__text">No city found :(</div>
       )}
