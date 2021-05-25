@@ -1,4 +1,5 @@
 ![Working Demo](https://github.com/gryffindor-2020/Mausam/blob/main/image.jpg)
+![mobile-view](https://github.com/gryffindor-2020/Mausam/blob/main/mobile.jpg)
 
 # Mausam -Weather App
 
@@ -37,6 +38,6 @@ $ npm run dev
 
 ## Features
 
-Instead of a default city for every user, first time the app loads, city will be set to the city fetched by using user's IP Address.
-Search Bar fetches results according to the query entered by user without reloading the entire page. Also, the search bar is optimised to wait till the user has stopped typing, only then the API call is fired. Therefore, decreasing the API calls.
-This entire app is responsive and is made without help of any external library like Bootstrap and purely with CSS.
+- Instead of a default city for every user, first time the app loads, city will be set to the city fetched by using user's IP Address.
+- Search Bar fetches results according to the query entered by user without reloading the entire page. Also, the search bar is optimised to wait till the user has stopped typing, only then the API call is fired. Therefore, decreasing the API calls.
+- This entire app is responsive and is made without help of any external library like Bootstrap and purely with CSS.
