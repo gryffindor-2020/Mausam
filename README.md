@@ -31,7 +31,7 @@ Mausam is created with:
 To run this project, install it locally using npm:
 
 ```
-$ cd ../Mausam
+$ cd Mausam
 $ npm install
 $ npm run dev
 ```
