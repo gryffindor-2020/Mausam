@@ -233,3 +233,8 @@ a:visited {
     padding: 1.2rem; }
     .search-result__individual:not(:last-child) {
       border-bottom: 1px solid; }
+  .search-result__text, .search-result__icon {
+    font-size: 1.6rem; }
+    @media only screen and (max-width: 900px) {
+      .search-result__text, .search-result__icon {
+        font-size: 2rem; } }
