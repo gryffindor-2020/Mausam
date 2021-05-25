@@ -1,6 +1,7 @@
 .spinner-overlay {
-  height: 60vh;
+  height: 80%;
   width: 100%;
+  margin: 10% auto;
   display: flex;
   justify-content: center;
   align-items: center;
